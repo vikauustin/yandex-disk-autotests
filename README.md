@@ -17,6 +17,13 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+MAC/Linux
+
+```
+source .venv/bin/activate           
+export YANDEX_DISK_TOKEN="ваш_токен"  
+```
+
 3. Получить OAuth-токен тестового аккаунта в Полигоне: https://yandex.ru/dev/disk/poligon/
 4. Задать токен в переменной окружения:
 ```
