@@ -12,22 +12,32 @@
 ## Подготовка
 1. Python 3.10+
 2. Установить зависимости:
+
+Windows:
 ```
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-MAC/Linux
 
+macOS/Linux:
 ```
-source .venv/bin/activate           
-export YANDEX_DISK_TOKEN="ваш_токен"  
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 3. Получить OAuth-токен тестового аккаунта в Полигоне: https://yandex.ru/dev/disk/poligon/
 4. Задать токен в переменной окружения:
+
+Windows:
 ```
 $env:YANDEX_DISK_TOKEN="ваш_токен"
+```
+
+macOS/Linux:
+```
+export YANDEX_DISK_TOKEN="ваш_токен"
 ```
 
 ## Запуск
