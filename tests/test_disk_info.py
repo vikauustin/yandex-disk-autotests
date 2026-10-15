@@ -1,7 +1,13 @@
+import allure
+
+@allure.feature("Информация о диске")
+@allure.title("Получение информации о диске возвращает 200")
 def test_get_disk_info_returns_200(client):
     response = client.get_disk_info()
     assert response.status_code == 200
 
+@allure.feature("Информация о диске")
+@allure.title("Информация о диске содержит корректные поля")
 def test_get_disk_info_has_correct_fields(client):
     response = client.get_disk_info()
 

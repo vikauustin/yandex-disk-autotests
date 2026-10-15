@@ -1,7 +1,7 @@
 # Автотесты REST API Яндекс Диска
 
 Тестовое задание: автотесты для API Яндекс Диска (https://cloud-api.yandex.net).
-Стек: Python 3, pytest, requests.
+Стек: Python 3, pytest, requests, Allure.
 
 ## Что проверяется
 - GET: информация о Диске, метаинформация папки, ответ 401 без токена
@@ -45,6 +45,14 @@ export YANDEX_DISK_TOKEN="ваш_токен"
 pytest -v
 ```
 Тесты создают временные папки в `disk:/autotests` и удаляют их после себя.
+
+## Отчёт Allure
+
+Нужны Java 11+ и Allure CLI (Windows: `scoop install allure`, macOS: `brew install allure`).
+```
+pytest --alluredir=allure-results
+allure serve allure-results
+```
 
 ## Структура
 - `disk_api/config.py` — адрес API и чтение токена
